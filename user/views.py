@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render
 from django.views.generic import View
 
@@ -13,3 +14,7 @@ class CreateUserView(View):
         }
         return render(request, 'user/create.html', context)
 
+
+
+def index(request):
+    return render(request, 'user/profile.html')
